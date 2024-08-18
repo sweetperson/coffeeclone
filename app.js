@@ -33,13 +33,8 @@ function setsliderclick(clickindex) {
     elementscr.alt = sliderimages[clickindex].alt
     slidertitle.innerHTML = sliderimages[clickindex].title
     slidertext.innerHTML = sliderimages[clickindex].text
-    // sldbtnclk.className = 'active';
     sliderbtn[clickindex-1].classList.remove('active')
     sliderbtn[clickindex].classList = 'active'
-    // sliderbtn.forEach(e =>{
-    //     debugger
-    //     var a = e
-    // });
 }
 var reviewsliderimgsrc = document.getElementById('reviewsliderimg');
 var reviewslidertext = document.getElementById('reviewslidertext');
@@ -50,27 +45,17 @@ function setrevoewsliderclick(clickindex) {
     if (reviewindex == reviewsliderimges.length) {
         reviewindex = 0;
     }
-    // var sldbtnclk = document.getElementById(clickindex);
     reviewsliderimgsrc.src = reviewsliderimges[reviewindex].src
     reviewsliderimgsrc.alt = reviewsliderimges[reviewindex].alt
     reviewslidertext.innerHTML = reviewsliderimges[reviewindex].text
     reviewslidername.innerHTML = reviewsliderimges[reviewindex].name
     reviewsliderjob.innerHTML = reviewsliderimges[reviewindex].posotion
-    // sldbtnclk.className = 'active'
     reviewindex += clickindex
 }
 setrevoewsliderclick(1);
 function showmenu() {
 
 }
-// function getmenuitemfun(){
-//     //<img id="tblimg" src="./images/coffeeicon.jpg" alt="">
-//     var elementmenuimg = document.getElementById('tblimg');
-//     for(var ind = 0; ind < menuitem.length; ind ++){
-//         var el = menuitem[ind].src;
-//         elementmenuimg.appendChild('<img id="tblimg" src='`${el}`' alt="">')
-//     }
-// }
 function getmenuitemfun() {
     // Get the container element where images will be appended
     var container = document.getElementById('tblul')
@@ -84,22 +69,11 @@ function getmenuitemfun() {
         var a = "";
         a.append('<img id="tblimg" src="./images/coffeeicon.jpg" alt="">')
         container.append(a)
-        // //Create a new li 
-        // var li = document.createElement('li');
-        // // Create a new image element
-        // var img = document.createElement('img');
-        // img.src = imgSrc;
-        // img.alt = 'Menu Item';
-        // img.id ='tblimg'
-
-        // Append the image to the container
-        // container.appendChild(img);
     }
 }
 // getmenuitemfun()
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".navbar .container-fluid .navbar-nav .nav-item a");
-// const navLi = document.querySelectorAll(".navbar .nav-container a");
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach((section) => {
